@@ -3,6 +3,7 @@ class Restaurant < ApplicationRecord
 
   validates :address, presence: true
   validates :name, presence: true
+  validates :phone_number, presence: true
   validates :category, inclusion: { in: :categories_list }
 
   def self.categories_list
