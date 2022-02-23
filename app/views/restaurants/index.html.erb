@@ -1,0 +1,19 @@
+<main class="py-5 px-4">
+  <div class="container w-80">
+    <h2 class="fw-bold">All restaurants</h2>
+
+      <section class="restaurants">
+        <% @restaurants.each do |restaurant| %>
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+              <p><%= restaurant.category %></p>
+              <p><%= restaurant.address %></p>
+              <p><%= restaurant.phone_number %></p>
+            </div>
+          </div>
+        <% end %>
+      </section>
+
+  </div>
+</main>
