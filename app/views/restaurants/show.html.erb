@@ -14,7 +14,8 @@
 
     <section class="reviews">
       <h3>Reviews</h3>
-      <%= link_to 'Write a review', new_restaurant_review_path(@restaurant) %>
+      <%# <%= link_to 'Write a review', new_restaurant_review_path(@restaurant) %>
+      <%= render 'reviews/form', restaurant: @restaurant, review: @review %>
 
       <% @restaurant.reviews.each do |review| %>
         <div class="row">
