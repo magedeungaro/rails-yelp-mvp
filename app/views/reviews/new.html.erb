@@ -1,0 +1,7 @@
+<main class="py-5 px-4">
+  <div class="container w-80">
+    <h2 class="fw-bold">New review for <%= @restaurant.name %></h2>
+    <%= render 'form', restaurant: @restaurant, review: @review %>
+    <%= link_to 'Cancel', restaurant_path(@restaurant), class: 'btn btn-light' %>
+  </div>
+</main>
