@@ -1,0 +1,31 @@
+<main class="py-5 px-4">
+  <div class="container w-80">
+
+    <section class="restaurants">
+      <h2 class="fw-bold"><%= @restaurant.name %></h2>
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <p><%= @restaurant.category %></p>
+            <p><%= @restaurant.address %></p>
+            <p><%= @restaurant.phone_number %></p>
+          </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+      <h3>Reviews</h3>
+      <%= link_to 'Write a review', new_restaurant_review_path(@restaurant) %>
+
+      <% @restaurant.reviews.each do |review| %>
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <p><%= review.rating %></p>
+            <p><%= review.content %></p>
+          </div>
+        </div>
+      <% end %>
+
+    </section>
+
+  </div>
+</main>
